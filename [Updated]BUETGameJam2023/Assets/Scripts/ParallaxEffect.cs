@@ -4,32 +4,42 @@ using UnityEngine;
 
 public class ParallaxEffect : MonoBehaviour
 {
-
     private float startPos;
-    private float Lenght;
+    private float length;
     private GameObject cam;
     [SerializeField] private float parallaxEffect;
+
+    private PlatformSpawn platformSpawn; // Reference to the PlatformSpawn script
 
     private void Start()
     {
         cam = GameObject.Find("Virtual Camera");
         startPos = transform.position.x;
-        Lenght = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
+        length = gameObject.GetComponent<SpriteRenderer>().bounds.size.x;
+
+        // Get the PlatformSpawn component attached to the spawn point GameObject
+        platformSpawn = GetComponent<PlatformSpawn>();
+
+        // Call the SpawnPlatform method from the PlatformSpawn script to spawn the initial platform.
+        platformSpawn.SpawnPlatform();
     }
 
     private void Update()
     {
-        float temporary = (cam.transform.position.x * (1 - parallaxEffect));
-        float distance = (cam.transform.position.x * parallaxEffect);
+        float temp = cam.transform.position.x * (1 - parallaxEffect);
+        float distance = cam.transform.position.x * parallaxEffect;
         transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
 
-        if (temporary > startPos + Lenght)
+        if (temp > startPos + length)
         {
-            startPos += Lenght;
+            startPos += length;
+
+            // Call the SpawnPlatform method from the PlatformSpawn script to spawn a new platform.
+            platformSpawn.SpawnPlatform();
         }
-        else if (temporary < startPos - Lenght)
+        else if (temp < startPos - length)
         {
-            startPos -= Lenght;
+            startPos -= length;
         }
     }
 }
