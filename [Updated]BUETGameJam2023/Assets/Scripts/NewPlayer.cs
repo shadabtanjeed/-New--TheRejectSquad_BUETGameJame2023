@@ -7,7 +7,7 @@ public class NewPlayer : PhysicsObject
     [SerializeField] private float maxSpeed = 1;
     [SerializeField] private float jumpPower = 10;
     private float speedIncreaseInterval = 8f;  // Interval for speed increase
-    private float speedIncreaseAmount = 1f;  // Amount to increase speed by
+    private float speedIncreaseAmount = 0.5f;  // Amount to increase speed by
 
     // Start is called before the first frame update
     void Start()
