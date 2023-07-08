@@ -451,7 +451,7 @@ MonoBehaviour:
   platformPrefab: {fileID: 238024008}
   minHeight: 2
   maxHeight: 4
-  spawnOffset: 26
+  spawnOffset: 45
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.0076666, y: -0.18260002, z: -9.987469}
+  m_LocalPosition: {x: -6.008434, y: -0.18260002, z: -9.987469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
