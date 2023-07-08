@@ -94,6 +94,27 @@ ScriptedImporter:
     spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
+  - name: Ground
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3842
+      width: 1920
+      height: 117
+    spriteID: bf07eea01fa5b68489de4ac7b6863eb0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3842}
+    spritePosition: {x: 0, y: 0}
   - name: Player Demo
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -317,6 +338,16 @@ ScriptedImporter:
   resliceFromLayer: 0
   mosaicPSDLayers: []
   rigPSDLayers:
+  - name: Ground
+    spriteName: Ground
+    isGroup: 0
+    parentIndex: -1
+    spriteID: bf07eea01fa5b68489de4ac7b6863eb0
+    layerID: 50
+    mosaicPosition: {x: 4, y: 3842}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Player Demo
     spriteName: Player Demo
     isGroup: 0
